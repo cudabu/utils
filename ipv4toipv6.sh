@@ -6,7 +6,7 @@ convert_to_hex() {
 	printf "%02X" $1
 }
 
-GLOBAL_PREFIX="2600:1700:1bd0:17a0"
+GLOBAL_PREFIX="2600:1700:1bd0:17af"
 
 # check if input argument is passed
 if [ "$#" -ne 1 ]; then
@@ -31,4 +31,4 @@ done
 
 ipv6_address="${GLOBAL_PREFIX}::$hex_ip"
 
-echo "The IPv6 address is: $ipv6_address"
+echo "The IPv6 address is: $ipv6_address/64"
